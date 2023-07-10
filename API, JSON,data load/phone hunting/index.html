@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1 class="text-center text-primary my-4">Phone Hunting Now</h1>
+    <!-- seach phones field  -->
+    <section class="d-flex justify-content-center my-5">
+        <div class="input-group mb-3 w-25 ">
+            <input id="seach-field" type="text" class="form-control" placeholder="Search Now your fevorite"
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button onclick="searchPhones()" class="btn btn-outline-secondary btn-primary text-white" type="button"
+                id="button-addon2">Button</button>
+        </div>
+    </section>
+    <!-- not fond message  -->
+    <section>
+        <h1 id="not-found" class="text-center text-warning d-none">Search result not found here !</h1>
+    </section>
+
+    <!-- phones card  -->
+    <section class="container ">
+        <div id="phones-container" class="row row-cols-1 row-cols-md-3 g-4">
+        </div>
+    </section>
+    <!-- spinner  -->
+    <section>
+        <div class="text-center">
+            <div id="spinner" class="spinner-border d-none" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <div class="text-center pt-5">
+            <button onclick="showAll()" id="show-all-btn" class="btn btn-primary d-none">Show All</button>
+        </div>
+    </section>
+
+
+
+    <!-- deatils section  -->
+    <section>
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade w-100" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="modal-details">
+
+                    </div>
+                    <!-- modal body  -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <script src="js/load.js"></script>
+    <script src="js/singlePhone.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
